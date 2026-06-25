@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专题 · 数字界面与体验构建 · ng28</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f6f8fa;
+      color: #1e2a3a;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 720px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 2.4rem 0 4rem;
+      flex: 1;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 3.2rem;
+      border-bottom: 1px solid #dce2ea;
+      padding-bottom: 2.2rem;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #54708f;
+      background: #ebf0f6;
+      padding: 0.15rem 0.7rem;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #3d516a;
+      max-width: 600px;
+    }
+
+    /* 章节 */
+    .section {
+      margin-bottom: 2.8rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #1e2a3a;
+      border-left: 3px solid #8b9eb5;
+      padding-left: 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+      color: #2c3b4e;
+    }
+
+    .stat-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.6rem 0 1.2rem;
+    }
+
+    .stat-item {
+      flex: 1 1 160px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.1rem 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #eef2f7;
+    }
+
+    .stat-num {
+      font-size: 1.6rem;
+      font-weight: 350;
+      color: #1e2a3a;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-desc {
+      font-size: 0.85rem;
+      color: #5a6f88;
+    }
+
+    .highlight {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      margin: 1.8rem 0 1.2rem;
+      border: 1px solid #e4eaf1;
+    }
+
+    .highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      color: #1e2a3a;
+    }
+
+    .faq-a {
+      font-size: 0.95rem;
+      color: #3d516a;
+      padding-left: 0.4rem;
+    }
+
+    /* 页尾提示 */
+    .footer-note {
+      margin-top: 3.6rem;
+      padding-top: 2rem;
+      border-top: 1px solid #dce2ea;
+      text-align: left;
+      font-size: 0.9rem;
+      color: #4f6681;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .footer-note a {
+      color: #1e2a3a;
+      text-decoration: none;
+      border-bottom: 1px solid #b7c6d9;
+      transition: border-color 0.15s, color 0.15s;
+      font-weight: 450;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #1e2a3a;
+      color: #000;
+    }
+
+    .tagline {
+      font-size: 0.8rem;
+      color: #6a7f99;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .page {
+        padding: 1.6rem 0 3rem;
+      }
+      .stat-item {
+        flex: 1 1 100%;
+      }
+      .highlight {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- hero -->
+    <header class="hero">
+      <span class="hero-label">专题 · 界面与逻辑</span>
+      <h1>数字空间中的结构设计</h1>
+      <p>围绕<strong>ng28</strong> 所代表的信息层级与交互逻辑，探讨现代站点如何平衡功能密度与浏览节奏。</p>
+    </header>
+
+    <!-- 背景说明 -->
+    <div class="section">
+      <h2 class="section-title">背景</h2>
+      <p>在过去几年中，内容型站点的设计重心从单纯的视觉风格转向信息架构与可读性。以 <a href="https://official-chn-ng28.com">ng28</a> 为例，其页面组织方式在数据展示与用户引导之间寻找交叠点，在不牺牲深度的前提下降低认知负荷。这种思路不是新鲜事物，但在移动优先的语境下被重新审视。</p>
+      <p>从实际案例来看，窄版式、克制配色、清晰的分组逻辑——这些要素在 <a href="https://official-chn-ng28.com">ng28</a> 的界面中都有体现。设计者有意减少了视觉噪音，让内容本身成为界面主角。这并不是简化，而是更精细地安排信息权重。</p>
+    </div>
+
+    <!-- 三段自然介绍 / 特点与场景混合 -->
+    <div class="section">
+      <h2 class="section-title">信息承载与节奏控制</h2>
+      <p>一个成熟的页面往往包含多种内容模块：概述、数据摘要、问答、行动出口。关键在于各模块之间的过渡与呼吸感。<strong>ng28</strong> 所采用的栅格系统与间距策略，本质上是为阅读节奏服务。每一个区块的上下留白、字体大小递进，都在暗示用户「这里是新段落」「此处为重点」。</p>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-num">~320</div>
+          <div class="stat-desc">常用界面区块平均宽度 (px)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3</div>
+          <div class="stat-desc">主要信息层级</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">1.7</div>
+          <div class="stat-desc">行高系数 (正文)</div>
+        </div>
+      </div>
+
+      <p>这种设计方法在数据密集场景下尤其有效。例如当页面需要同时呈现背景介绍、功能拆解以及常见疑问时，<a href="https://official-chn-ng28.com">ng28</a> 通过卡片、分隔线与微妙的背景变化来区分内容属性，避免用户因连续阅读而产生疲劳。</p>
+    </div>
+
+    <div class="highlight">
+      <p>结合最新前端策略，静态站点可以在不依赖重型框架的前提下，实现丰富的布局与交互反馈。强调内容语义与可访问性，这并不是一次视觉革命，而是对「少而精」设计原则的再次践行。</p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">常见疑问摘要</h2>
+      <div class="faq-item">
+        <div class="faq-q">○ 这种窄版式设计是否适合长篇幅内容？</div>
+        <div class="faq-a">研究表明，每行 60–75 字符(约 660–720px 容器宽度)在中文阅读场景中能维持较高的视线移动舒适度。<strong>ng28</strong> 采用类似宽度，配合适度行高，适合篇幅较长的专题页面。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">○ 页面内链接如何自然融入而不干扰叙事？</div>
+        <div class="faq-a">将链接以短语形式嵌入句子，而非独立成按钮。例如在介绍某一特性时直接提及 <a href="https://official-chn-ng28.com">ng28</a> 的相关结构，既保持上下文完整，又提供延伸阅读出口。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">○ 留白与信息密度的平衡点在哪里？</div>
+        <div class="faq-a">没有固定公式。通常建议每个独立内容块之后保留至少 1.2rem 以上的垂直间距，并通过标题、分割线或背景色建立视觉层级。实际使用 <a href="https://official-chn-ng28.com">ng28</a> 页面时可依据内容调整间距比例。</div>
+      </div>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <footer class="footer-note">
+      <span>了解更多关于信息架构与界面组织思路，可至 <a href="https://official-chn-ng28.com">ng28</a> 查阅完整主题。</span>
+      <span class="tagline">极简 · 留白 · 层级</span>
+    </footer>
+  </div>
+</body>
+</html>
